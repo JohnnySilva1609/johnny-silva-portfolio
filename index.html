@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnny Silva | Portfolio</title>
+    <style>
+        :root {
+            --bg-main: #1c1c1e;       
+            --bg-card: #2c2c2e;       
+            --accent-red: #e63946;    
+            --text-white: #ffffff;
+            --text-dim: #b0b0b0;
+            --border: #3a3a3c;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-dim);
+            line-height: 1.8;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(44, 44, 46, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 3px solid var(--accent-red);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 25px 0;
+        }
+
+        nav a {
+            margin: 0 35px;
+            text-decoration: none;
+            color: var(--text-white);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-red); }
+
+        section {
+            padding: 160px 10% 100px 10%; 
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .container { max-width: 1100px; margin: auto; width: 100%; }
+
+        h1 {
+            color: var(--text-white);
+            font-size: 3rem;
+            margin-bottom: 80px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .content-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 50px;
+            border-radius: 20px;
+            margin-bottom: 60px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+
+        /* Label Tag - Centered Above Content */
+        .label-tag {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 20px auto; /* Centered with bottom margin to sit above text */
+            background: var(--accent-red);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .grid { display: grid; gap: 40px; }
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+        .media-placeholder {
+            background: #1c1c1e;
+            border: 2px dashed var(--accent-red);
+            border-radius: 12px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 850px) {
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+
+        footer { padding: 80px 0; background: #121212; text-align: center; border-top: 1px solid var(--border); }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-red);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <div class="content-box" style="border-bottom: 8px solid var(--accent-red);">
+                <span class="label-tag">Introduction</span>
+                <h2 style="color: white; font-size: 2.5rem; margin: 10px 0;">To whom it may concern, my name is Johnny Silva.</h2>
+                <p>I am a grade 11 student at St. Mary's Catholic Secondary School | I am skilled at woodworking, working around computers, and wiring electrical appliances together and plan to work in the trades once I graduate.</p>
+            </div>
+            <div class="content-box">
+                <span class="label-tag">Career Pathway</span>
+                <p style="font-size: 1.2rem; color: white;">Once I acquire my OSSD, I will go towards acquiring an apprenticeship in either construction-based trades like high-rise, electrical trade, or welding and millwright.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" style="background-color: #141415;">
+        <div class="container">
+            <h1>About Me</h1>
+            <div class="content-box">
+                <span class="label-tag">My Story & Goals</span>
+                <p>I was born in the city of Hamilton on July 20th, 2009 | My goals are to become a successful tradesperson, as most of my family inform me of the benefits of being in the trades as well as just the welcoming environment.</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="content-box">
+                    <span class="label-tag">Education</span>
+                    <p><strong>Upcoming Diploma-OSSD 2027</strong><br>St. Mary's Catholic Secondary School</p>
+                </div>
+                <div class="content-box">
+                    <span class="label-tag">Technical Skills</span>
+                    <p>Adequate knowledge of the woodworking trades, minor knowledge of the automotive trades, as well as minor knowledge of the electrical trades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interests">
+        <div class="container">
+            <h1>My Interests</h1>
+            <div class="grid grid-3">
+                <div class="content-box">
+                    <span class="label-tag">Tech & Hardware</span>
+                    <p style="color: white; font-weight: bold;">Constructing & Dismantling Computers</p>
+                </div>
+                <div class="content-box">
+                    <span class="label-tag">Career Focus</span>
+                    <p style="color: white; font-weight: bold;">Construction sector trades - Welding | Highrise | Electrician</p>
+                </div>
+                <div class="content-box">
+                    <span class="label-tag">Entertainment</span>
+                    <p style="color: white; font-weight: bold;">Video Games | Dismantling eletrical hardware | building wooden structures | listening to music</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" style="background-color: #141415;">
+        <div class="container">
+            <h1>My Projects</h1>
+            <div class="content-box" style="border: 2px solid var(--accent-red);">
+                <span class="label-tag">Featured Project</span>
+                <p>Detailed description of your woodworking or technical artifacts.</p>
+                <div class="media-placeholder">[Main Photo/Video Placeholder]</div>
+            </div>
+            <div class="grid grid-2">
+                <div class="content-box">
+                    <span class="label-tag">Woodworking Artifact</span>
+                    <div class="media-placeholder" style="height: 150px;">[Photo]</div>
+                </div>
+                <div class="content-box">
+                    <span class="label-tag">Electrical Artifact</span>
+                    <div class="media-placeholder" style="height: 150px;">[Photo/Video]</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2 style="color: white;">Contact Johnny Silva</h2>
+	<p>Silvajo134@hwcdsb.ca</p>
+        <p>St. Mary's Catholic Secondary School | Hamilton, ON</p>
+        <p style="margin-top: 40px; opacity: 0.3;">&copy; 2026 Johnny Silva Portfolio</p>
+    </footer>
+
+    <a href="#home" class="back-to-top" title="Back to Top">↑</a>
+
+</body>
+</html>
